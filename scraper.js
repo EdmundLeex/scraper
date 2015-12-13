@@ -30,7 +30,6 @@ casper.start("file:///Users/user/Nitrous/supersonic-moustache-92/coding_challeng
   var fund_yr_info = this.getElementsInfo(fund_yr_selector);
   var fund_amt_info = this.getElementsInfo(fund_amt_selector);
 
-  var fund_data = [];
   var current_fund_yr = null;
   var csv = "";
   for (var i = 0; i < fund_yr_info.length; i++) {
@@ -44,7 +43,22 @@ casper.start("file:///Users/user/Nitrous/supersonic-moustache-92/coding_challeng
   }
 
   var fs = require("fs");
-  fs.write("data.csv", csv);
+  fs.write("funding.csv", csv);
 });
+
+casper.thenOpen("file:///Users/user/Nitrous/supersonic-moustache-92/coding_challenges/web_scrapper/news.html", function () {
+  var newsDashSelector = 'div[class="dash-news"] a';
+  var newsInfo = this.getElementsInfo(newsDashSelector);
+  var csv = "";
+  for (var i = 0; i < newsInfo.length; i++) {
+    csv += '"' + newsInfo[i].text + '"'
+        + ","
+        + newsInfo[i].attributes.href
+        + "\n";
+  }
+
+  var fs = require("fs");
+  fs.write("news.csv", csv);
+})
 
 casper.run();
