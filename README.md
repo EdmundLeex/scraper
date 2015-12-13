@@ -9,7 +9,7 @@ Please install Phantomjs 1.x and Casperjs ~> 1.1
 or simply run `npm install`
 
 ## Scraping
-Go to terminal, and navigate to root. Run `casperjs scraper.js`.
+Go to terminal, and navigate to root. Run `casperjs lib/scraper.js`.
 
 The script will automatically login and scrape content from Uber page.
 
