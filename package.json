@@ -2,7 +2,9 @@
   "name": "cbinsight-scraper",
   "versions": "1.0.0",
   "dependencies": {
+    "casperjs": "^1.1.0-beta3",
     "dotenv": "^1.2.0",
+    "phantom": "^0.8.4",
     "phantomjs": "^1.9.19"
   }
 }
