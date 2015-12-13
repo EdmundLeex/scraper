@@ -1,0 +1,8 @@
+{
+  "name": "cbinsight-scraper",
+  "versions": "1.0.0",
+  "dependencies": {
+    "dotenv": "^1.2.0",
+    "phantomjs": "^1.9.19"
+  }
+}
