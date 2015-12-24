@@ -1,5 +1,5 @@
 # Web Scraper
-This scraper uses Casperjs and Phantomjs.
+This is a proriotory scrapper to scrap CBInsight. It uses Casperjs and Phantomjs.
 
 ## Preliminary
 Please install Phantomjs 1.x and Casperjs ~> 1.1
